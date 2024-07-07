@@ -11,7 +11,7 @@ class myApp extends StatelessWidget{
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowMaterialGrid: false,
-      home: Concurency(),
+      home:  Concurency(),
     );
   }
 }

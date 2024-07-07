@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 
 
 class Concurency extends StatelessWidget {
+  
   const Concurency({super.key});
+  // bool passwordVisible=false;  
   @override
   Widget build(BuildContext context) {
+  
     return  Scaffold(
       
       backgroundColor: Colors.white,
@@ -30,12 +33,31 @@ class Concurency extends StatelessWidget {
             child:
                TextField(
                 decoration: InputDecoration(
-                hintText: "Masukkan Username",
-                border: OutlineInputBorder(),
+                prefixIcon: Align(
+                  heightFactor: 1.0,
+                  widthFactor: 1.0 ,
+                  child: Icon(Icons.person , color: Colors.black),
+                ),
+                label: Text("Username" , style: TextStyle
+                (color: Colors.black),),
+                // hintText: "Masukkan Username",
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(15))
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(15)),
+                  borderSide: BorderSide(
+                    color: Colors.blue ,
+                    width: 2 ,
+                    style: BorderStyle.solid ,
+                    strokeAlign: BorderSide.strokeAlignOutside
+                    )
+                  ),
                 fillColor: Colors.black,
+                filled: false
               ),
               style: TextStyle(
-                color: Colors.black
+                color: Colors.black,
               ),
             ),
             ),
@@ -44,13 +66,33 @@ class Concurency extends StatelessWidget {
             child:
                TextField(
                 decoration: InputDecoration(
-                hintText: "Masukkan Password",
-                border: OutlineInputBorder(),
+                prefixIcon: Align(
+                  heightFactor: 1.0 ,
+                  widthFactor: 1.0 ,
+                  child: Icon(Icons.lock , color: Colors.black),
+                ) ,
+                label: Text("Password" , style: TextStyle(color: Colors.black)),
+                // hintText: "Masukkan Password",
+                border: OutlineInputBorder(
+                   borderRadius: BorderRadius.all(Radius.circular(15))
+                ),
+               focusedBorder: OutlineInputBorder(
+                   borderRadius: BorderRadius.all(Radius.circular(15)),
+                  borderSide: BorderSide(
+                    color: Colors.blue ,
+                    width: 2 , 
+                    style: BorderStyle.solid ,
+                    strokeAlign: BorderSide.strokeAlignOutside
+                    )
+                  ),
                 fillColor: Colors.black,
+                // prefixIcon: Center(child: Icon(Icons.person),
+                // )
               ),
               style: TextStyle(
                 color: Colors.black
               ),
+              
             ),
             ),
             SizedBox(
@@ -71,7 +113,8 @@ class Concurency extends StatelessWidget {
                         borderRadius: BorderRadius.circular(10),
                       )),
                     ),
-                    child:Text("Login"),
+                    child:Text("Login" , 
+                    style: TextStyle(fontSize: 20),),
                 ),
                 )
               ],
@@ -82,6 +125,7 @@ class Concurency extends StatelessWidget {
               Text(
               "Belum punya akun ?",
               style: TextStyle(
+                fontSize: 14,
                 color: Colors.black ,
                 fontWeight: FontWeight.w600
               ),
